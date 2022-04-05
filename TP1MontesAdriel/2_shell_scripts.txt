@@ -1,0 +1,14 @@
+1a) Que hace? el script inicia limpiando la pantalla (clear) para luego de forma recursiva realizar un salto de linea (echo -e "\033[H") y ejecutar el comando ps
+
+Comandos Usados:
+clear: limpiar terminal
+echo: imprimir por consola un mensaje
+ps: lista los procesos actuales
+
+5) Pone el nombre de todos los archivos contenidos en el directorio actual en minusculas
+
+6) Duplica la primera linea que se escribe y la siguiente no, en el caso de cumplir con el parametro "-p" se hace lo opuesto
+
+7) El script busca en todos los archivos de texto que existen en el directorio actual, la cadena o caracter que recibe en el segundo parametro/argumento y muestra por consola todos los resultados 
+
+8) Lista los archivos que se encuentren dentro del directorio actual que sean ".h" o ".c" al igual que si se encuentra dentro de cada archivo el unico argumento dado

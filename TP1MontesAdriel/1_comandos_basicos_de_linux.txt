@@ -1,0 +1,52 @@
+1a) ls: listar lo que este dentro del directorio actual
+cat: concatenar archivos
+more: es un filtro para recorrer el texto una pantalla a la vez
+less: similar a more, pero que permite retroceder movimiento en el archivo
+cp: copiar archivos o directorios
+rm: eliminar archivos o directorios
+mkdir: crear directorios 
+cd: cambiar de directorio
+pwd: muestra la direccion actual
+file: determina el tipo de un archivo
+df: muestra la cantidad de espacio en el disco
+grep: busca en los archivos un parametro dado
+
+1b) whatis: cada pagina del manual tiene una breve descripcion
+info: leer documentos en formato info
+man: da informacion sobre comandos
+
+1c) passwd: cambiar las contraseñas de usuarios
+mount: adjuntar un sistema de archivos de un dispositivo al arbol de archivos grande
+time: determina cuanto tarda un comando en ejecutarse
+date: muestra la fecha y hora 
+vi: editor de texto orientado a la pantalla
+gcc: compilador integrado
+exit: terminacion de un proceso
+reboot: reiniciar la maquina
+halt: detiene el sistema
+poweroff: apagar la maquina
+
+1d) ps: lista los procesos actuales
+kill: mata un proceso
+top: muestra los procesos del sistema
+
+1e) ifconfig: configura muestra y desactiva una interfaz
+ping: muestra la conectividad del equipo
+ip: muestra el ip de la maquina
+ssh: comunicacion segura con una maquina remota
+telnet: igual que ssh pero con protocolo telnet
+ftp: obtener o hacer copias de archivos de una computadora remota
+
+2)Comando equivalentes
+
+Linux cp = Windows copy
+Linux pwd = Windows chdir
+Linux rm = Windows del
+Linux mv = Windows move
+Linux grep = Windows file
+
+3a) Para que el usuario (propietario) tenga total permiso, y el resto solo de lectura y ejecucion seria:
+	chmod 755 <nombre_archivo>
+	 
+3b) Para que el usuario solo tenga permiso de lectura y escritura, y el resto solo de lectura, para todos los archivos .txt seria: 
+	chmod 644 *.txt
