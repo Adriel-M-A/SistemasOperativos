@@ -3,6 +3,8 @@
 #include <sys/wait.h>
 #define TRUE 1
 
+char*comando[3]={"/bin/ls","-ltr", NULL};
+
 int main() {
 	int status;
 
@@ -13,6 +15,7 @@ int main() {
 	}
 	else
 		/* Código del hijo */
-		execl("/usr/bin/firefox", "",NULL);
+		//execl("/usr/bin/firefox", "",NULL);
+		execv(comando[0], comando);
 	return 0;
 }
