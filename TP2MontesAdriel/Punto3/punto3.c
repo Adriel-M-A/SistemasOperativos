@@ -7,17 +7,17 @@ int SEG=30;
  
 void manejadorInt () {
     alarm(0);
-	printf("\n Alarma cancelada \n");
+	printf("Alarma cancelada \n");
 }
 
 void manejadorAlr () {
-	printf("\n Alarma terminada \n");
+	printf("Alarma terminada \n");
     exit(1);
 }
 
 void manejadorQuit () {
 	signal (SIGALRM, SIG_IGN);
-    printf("\n Fin alarma \n");
+    printf("Fin alarma \n");
 }
 
 int main(void) {
