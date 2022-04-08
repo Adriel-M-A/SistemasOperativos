@@ -15,12 +15,13 @@ int main (){
 	char log[MAX];
 	char pas[MAX];
 	int status;
+
     signal (SIGALRM, manejadorAlr);
 
-	printf("ingrese nombre de usuario \n");
+	printf("Ingresar nombre de usuario \n");
 	scanf("%s", log);
 
-	printf("ingrese contraseña \n");
+	printf("Ingresar contraseña \n");
 	alarm(15);
 
     while(1){
