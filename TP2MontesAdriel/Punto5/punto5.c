@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <sys/wait.h>
+
 #define MAX 30
 
 void manejadorAlr (){
