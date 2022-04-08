@@ -18,10 +18,10 @@ int main (){
 
     signal (SIGALRM, manejadorAlr);
 
-	printf("Ingresar nombre de usuario \n");
+	printf("Login: ");
 	scanf("%s", log);
 
-	printf("Ingresar contraseña \n");
+	printf("Password: ");
 	alarm(15);
 
     while(1){
@@ -30,8 +30,7 @@ int main (){
             if (fork() != 0) {
                 waitpid(-1, &status,0);
             }
-            else
-            {
+            else {
                 execv("/bin/bash", NULL);
             }
         }
