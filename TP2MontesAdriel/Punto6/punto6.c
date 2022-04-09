@@ -2,7 +2,6 @@
 #include <signal.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <sys/wait.h>
 
 #define MAX 30
 
@@ -17,6 +16,7 @@ void getCommand(char str[]) {
             strcat(comando_aux, str[i]);
         }
         else {
+            
             comando[pos] = comando_aux;
             pos++;
         }
