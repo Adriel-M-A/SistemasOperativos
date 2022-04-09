@@ -9,13 +9,21 @@
 char*comando[MAX]={}
 
 //* se obitiene un comando o combinacion de comandos apartir de una cadena 
-void getCommand(char str[]){
+void getCommand(char str[]) {
     char comando_aux[10];
-
-
+    int pos = 0;
+    for(int i = 0; i < strlen(str); i++){
+        if(str[i] != ' ') {
+            strcat(comando_aux, str[i]);
+        }
+        else {
+            comando[pos] = comando_aux;
+            pos++;
+        }
+    }
 }
 
-int main (){
+int main () {
     char str[MAX];
 
     scanf("%s", str);
