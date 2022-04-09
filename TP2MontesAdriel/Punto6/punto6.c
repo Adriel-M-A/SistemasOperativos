@@ -2,31 +2,22 @@
 #include <signal.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <string.h>
 
-#define MAX 30
+#define MAX 10
 
-char*comando[MAX]={}
+char*comando[MAX] = {};
 
-//* se obitiene un comando o combinacion de comandos apartir de una cadena 
+//* se obtiene un comando o combinacion de comandos apartir de una cadena 
 void getCommand(char str[]) {
-    char comando_aux[10];
-    int pos = 0;
-    for(int i = 0; i < strlen(str); i++){
-        if(str[i] != ' ') {
-            strcat(comando_aux, str[i]);
-        }
-        else {
-            printf(%d, comando_aux);
-            comando[pos] = comando_aux;
-            pos++;
-        }
-    }
+    
 }
 
 int main () {
-    char str[MAX];
+    char str[30];
+    int init_size = strlen(str);
 
-    scanf("%s", str);
-    getComando(str);
+
+
     return 0;
 }
