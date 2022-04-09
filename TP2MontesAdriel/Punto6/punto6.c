@@ -16,7 +16,7 @@ void getCommand(char str[]) {
             strcat(comando_aux, str[i]);
         }
         else {
-            
+            printf(%d, comando_aux);
             comando[pos] = comando_aux;
             pos++;
         }
