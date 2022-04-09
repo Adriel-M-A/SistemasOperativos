@@ -4,13 +4,12 @@
 #include <stdlib.h>
 #include <sys/wait.h>
 
-#define MAX 30
+#define MAX 20
 
 void manejadorAlr (){
 	printf("Timeout \n");
 	exit(1);
 }
-
 
 int main (){
 	char log[MAX];
