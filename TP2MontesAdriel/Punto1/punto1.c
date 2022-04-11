@@ -13,7 +13,7 @@
 
    1b2) si, el manejador se pierde al terminar el programa
 
-   1b3) No es posible capturar el SIGKILL mediante kill -9
+   1b3) No es posible capturar el SIGKILL mediante kill -9, porque es la señal especifica para matar programas
 */
 
 int cant = 0;
