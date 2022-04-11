@@ -9,11 +9,11 @@
    interrupcion "ctrl + c". Una vez que el ingreso de esta señal llega a la cantidad de veces requerida, finaliza 
    la ejecución del programa y vuelve al shell normalmente.
 
-   1b1) 
+   1b1) No, no es posible matar el programa con ctrl+c, porque el programa espera un SIGINT la cual es una señal que se produce con ctrl+c, por lo que al usarse se realizan tareas varias como imprimir un "Recibi señal".
 
    1b2) si, el manejador se pierde al terminar el programa
 
-   1b3) Esposiblle capturar el SIGKILL mediante kill -9
+   1b3) No es posible capturar el SIGKILL mediante kill -9
 */
 
 int cant = 0;
