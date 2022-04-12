@@ -14,6 +14,3 @@ punto4: punto4.c
 
 punto5: punto5.c
 	gcc punto5.c -o punto5
-
-punto6: punto6.c
-	gcc punto6.c -o punto6
