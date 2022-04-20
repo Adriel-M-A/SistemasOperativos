@@ -10,3 +10,5 @@ Las principales funciones del Kernel son:
 - Administrar el tiempo de procesador, que es utilizado por los procesos en ejecución.
 - Gestionar el acceso y uso de los diferentes periféricos conectados al ordenador.
 
+2.¿Cuál es la diferencia entre Linux y GNU/Linux?
+
