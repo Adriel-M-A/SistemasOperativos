@@ -1,0 +1,11 @@
+
+1.¿Qué es y qué funciones tiene el kernel de Linux?
+
+El Kernel de Linux, es el núcleo del sistema operativo. Sin el Kernel no se podría realizar ninguna tarea, 
+ya que se encarga principalmente de que el software y el Hardware de nuestro PC funcionen 
+correctamente y puedan interactuar entre ellos. Las principales funciones del Kernel son:
+
+- Administrar la memoria RAM, para que puedan funcionar todos los programas y procesos en ejecución
+- Administrar el tiempo de procesador, que es utilizado por los procesos en ejecución.
+- Gestionar el acceso y uso de los diferentes periféricos conectados al ordenador.
+
