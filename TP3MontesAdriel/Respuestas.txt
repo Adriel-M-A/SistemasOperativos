@@ -14,3 +14,27 @@ Las principales funciones del Kernel son:
 
 Linux es un sistema operativo libre
 GNU/Linux es el nombre de un sistema operativo que utiliza el Kernel Linux con componentes heredados de GNU.
+
+3.¿Qué es un Kernel Panic y qué produce?
+
+El kernel panic es un mensaje mostrado por el núcleo de un sistema operativo una vez detectado 
+un error interno de sistema del cual no se puede recuperar, la famosa pantalla azul de la muerte.
+
+4.¿Cómo se consigue el código fuente del kernel? ¿Cuál es su estructura?
+
+5.¿En qué consiste el proceso de compilación del kernel? ¿Por qué compilar un kernel?
+
+6.¿Qué es un patch file, cómo se usa y para qué sirve?
+
+7.El código fuente del kernel es mantenido por miles de desarrolladores a lo largo del planeta. 
+¿De qué forma se organizan para mantener el historial de versiones del kernel?
+
+8.Explique el funcionamiento del sistema de control de versiones utilizado para mantener el
+kernel de Linux. Proponga un ejemplo práctico donde se vea su utilidad.
+
+9.¿Qué se entiende por módulo en Linux?¿En qué consiste?¿Cómo se carga y descarga un
+módulo por consola? Brinde ejemplos de ello.
+
+10.Implemente un pequeño ejemplo de un módulo funcional en lenguaje C, indicando
+los pasos necesarios para su creación. El módulo puede ser algo tan sencillo como
+mostrar un mensaje al cargarlo y otro al descargarlo.
