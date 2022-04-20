@@ -20,7 +20,7 @@ GNU/Linux es el nombre de un sistema operativo que utiliza el Kernel Linux con c
 3.¿Qué es un Kernel Panic y qué produce?
 
 El kernel panic es un mensaje mostrado por el núcleo de un sistema operativo una vez detectado 
-un error interno de sistema del cual no se puede recuperar, la famosa pantalla azul de la muerte.
+un error interno de sistema del cual no se puede recuperar, la famosa pantalla azul.
 
 
 4.¿Cómo se consigue el código fuente del kernel? ¿Cuál es su estructura?
@@ -68,12 +68,12 @@ GIT, creado tambien por Linus Tovald.
 8.Explique el funcionamiento del sistema de control de versiones utilizado para mantener el
 kernel de Linux. Proponga un ejemplo práctico donde se vea su utilidad.
 
-Todos los sistemas de control de versiones se basan en disponer de un repositorio, que es el conjunto de 
-información gestionada por el sistema. Este repositorio contiene el historial de versiones de todos los 
-elementos gestionados. Cada uno de los usuarios puede crearse una copia local duplicando el contenido del 
-repositorio para permitir su uso. Es posible duplicar la última versión o cualquier versión almacenada en 
-el historial. Un ejemplo práctico puede ser al hacer un trabajo de programación en conjunto con compañeros, 
-cada uno puede actualizar y modificar el código sin necesidad de estar utilizando la misma maquina.
+Este sistema de control de versione se basa en disponer de un repositorio, que es el conjunto de información 
+gestionada por el sistema. Este repositorio contiene el historial de versiones de todos los elementos gestionados. 
+Cada uno de los usuarios puede crearse una copia local duplicando el contenido del repositorio para permitir su 
+uso. Es posible duplicar la última versión o cualquier versión almacenada en el historial. Un ejemplo práctico 
+puede ser al hacer un trabajo de programación en conjunto con compañeros, cada uno puede actualizar y modificar 
+el código sin necesidad de estar utilizando la misma maquina.
 
 
 9.¿Qué se entiende por módulo en Linux?¿En qué consiste?¿Cómo se carga y descarga un
