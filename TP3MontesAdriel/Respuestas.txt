@@ -22,6 +22,14 @@ un error interno de sistema del cual no se puede recuperar, la famosa pantalla a
 
 4.¿Cómo se consigue el código fuente del kernel? ¿Cuál es su estructura?
 
+Una forma de conseguir el código fuente es con el comando apt-get source linux-source.
+El Kernel en Linux está formado por 5 subsistemas:
+- El planificador de procesos (sched).
+- El administrador o gestor de la memoria (mm).
+- El sistema de archivos virtual o conmutador de sistema de archivos virtual (vfs, virtual filesystem switch).
+- La interfaz de red (net).
+- La comunicación entre procesos (ipc, Inter-Process Communication).
+
 5.¿En qué consiste el proceso de compilación del kernel? ¿Por qué compilar un kernel?
 
 6.¿Qué es un patch file, cómo se usa y para qué sirve?
