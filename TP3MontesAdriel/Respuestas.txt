@@ -10,15 +10,18 @@ Las principales funciones del Kernel son:
 - Administrar el tiempo de procesador, que es utilizado por los procesos en ejecución.
 - Gestionar el acceso y uso de los diferentes periféricos conectados al ordenador.
 
+
 2.¿Cuál es la diferencia entre Linux y GNU/Linux?
 
 Linux es un sistema operativo libre
 GNU/Linux es el nombre de un sistema operativo que utiliza el Kernel Linux con componentes heredados de GNU.
 
+
 3.¿Qué es un Kernel Panic y qué produce?
 
 El kernel panic es un mensaje mostrado por el núcleo de un sistema operativo una vez detectado 
 un error interno de sistema del cual no se puede recuperar, la famosa pantalla azul de la muerte.
+
 
 4.¿Cómo se consigue el código fuente del kernel? ¿Cuál es su estructura?
 
@@ -30,15 +33,48 @@ El Kernel en Linux está formado por 5 subsistemas:
 - La interfaz de red (net).
 - La comunicación entre procesos (ipc, Inter-Process Communication).
 
+
 5.¿En qué consiste el proceso de compilación del kernel? ¿Por qué compilar un kernel?
 
+Todo el proceso se puede resumir en los siguientes pasos generales para todas las distros:
+1. Obtener las fuentes del kernel.
+2. Instalar las herramientas necesarias para la compilación.
+3. Descomprimir las fuentes del kernel en /usr/src/
+4. Configurar el kernel (ej. make menuconfig).
+5. Compilar (make), compilar los módulos (make modules), instalar los módulos, (make modules_install).
+6. Instalar el kernel compilado (make install).
+7. Crear la imagen (initrd) para el nuevo kernel y ajustar grub para que la encuentre.
+
+Compilando el kernel se gana en velocidad y la computadora consumirá mucha menos memoria RAM ya
+que al optimizar minuciosamente ese “operador de mando” que tiene Linux llamado Kernel para la
+arquitectura del hardware de tu ordenador, todo fluirá.
+
+
 6.¿Qué es un patch file, cómo se usa y para qué sirve?
+
+Patch es un comando que actualiza ficheros de texto de acuerdo a las instrucciones contenidas en un 
+archivo separado, llamado archivo de parche. Este es un archivo de texto que consiste en una lista de las 
+diferencias entre ficheros y se produce mediante la ejecución del comando diff comparando con el fichero 
+original y actualizándolo con los argumentos de diff.
+
 
 7.El código fuente del kernel es mantenido por miles de desarrolladores a lo largo del planeta. 
 ¿De qué forma se organizan para mantener el historial de versiones del kernel?
 
+Los desarrolladores se organizan mediante un sistema de control de versiones, al cual conocemos como
+GIT, creado tambien por Linus Tovald.
+
+
 8.Explique el funcionamiento del sistema de control de versiones utilizado para mantener el
 kernel de Linux. Proponga un ejemplo práctico donde se vea su utilidad.
+
+Todos los sistemas de control de versiones se basan en disponer de un repositorio, que es el conjunto de 
+información gestionada por el sistema. Este repositorio contiene el historial de versiones de todos los 
+elementos gestionados. Cada uno de los usuarios puede crearse una copia local duplicando el contenido del 
+repositorio para permitir su uso. Es posible duplicar la última versión o cualquier versión almacenada en 
+el historial. Un ejemplo práctico puede ser al hacer un trabajo de programación en conjunto con compañeros, 
+cada uno puede actualizar y modificar el código sin necesidad de estar utilizando la misma maquina.
+
 
 9.¿Qué se entiende por módulo en Linux?¿En qué consiste?¿Cómo se carga y descarga un
 módulo por consola? Brinde ejemplos de ello.
