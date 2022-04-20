@@ -12,3 +12,5 @@ Las principales funciones del Kernel son:
 
 2.¿Cuál es la diferencia entre Linux y GNU/Linux?
 
+Linux es un sistema operativo libre
+GNU/Linux es el nombre de un sistema operativo que utiliza el Kernel Linux con componentes heredados de GNU.
