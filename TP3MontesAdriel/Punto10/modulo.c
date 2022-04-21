@@ -9,12 +9,12 @@ mostrar un mensaje al cargarlo y otro al descargarlo.
 */
 
 static int __init mi_modulostart(void){
-    printk(KERN_INFO "hola mundo");
+    printk(KERN_INFO "Hola mundo");
     return 0;
 }
 
 static void __exit mi_moduloexit(void){
-    printk(KERN_INFO "chau mundo");
+    printk(KERN_INFO "Nos vemos mundo");
 }
 
 module_init(mi_modulostart);
