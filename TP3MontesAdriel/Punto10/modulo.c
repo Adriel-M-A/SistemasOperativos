@@ -1,6 +1,6 @@
+#include <linux/init.h> /* Para usar la macro de __init y __exit */
 #include <linux/module.h> /* Lib para modulos */
 #include <linux/kernel.h> /* Para usar la macro KERN_INFO */
-#include <linux/init.h> /* Para usar la macro de __init y __exit */
 
 /*
 10.Implemente un pequeño ejemplo de un módulo funcional en lenguaje C, indicando
