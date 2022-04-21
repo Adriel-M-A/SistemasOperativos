@@ -12,3 +12,5 @@ Utiles para TP3
 comandos para gestionar los modulos
 
 - lsmod: nos da una lista de los modulos, vinculados/cargados en el kernel
+- rmmod: descargar un modulo
+
