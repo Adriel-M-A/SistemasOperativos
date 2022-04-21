@@ -1,9 +1,3 @@
-// Definiendo __KERNEL__ and MODULE nos permite acceder a nivel de kernel.
-//root@pc#undef __KERNEL__
-//root@pc#define __KERNEL__
-//root@pc#undef MODULE
-//root@pc#define MODULE
-
 #include <linux/module.h> /* Lib para modulos */
 #include <linux/kernel.h> /* Para usar la macro KERN_INFO */
 #include <linux/init.h> /* Para usar la macro de __init y __exit */
