@@ -19,3 +19,6 @@ static void __exit mi_moduloexit(void){
 
 module_init(mi_modulostart);
 module_exit(mi_moduloexit);
+
+
+MODULE_LICENSE("lala");
