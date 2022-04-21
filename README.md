@@ -7,4 +7,3 @@ Repositorio que contiene todos los trabajos de entrega de la materia ***Sistemas
 ### Teoria 
 
 ### Practica 
-== hola ==
