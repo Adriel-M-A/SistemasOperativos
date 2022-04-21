@@ -16,3 +16,5 @@ static exit __exit_mi_moduloexit(void){
     printk(KERN_INFO "chau mundo");
 }
 
+module_init(__init_mi_modulostart);
+module_exit(__exit_mi_moduloexit);
