@@ -1,6 +1,6 @@
 # SistemasOperativos
 
-Repositorio que contiene todos los trabajos de entrega de la materia ***Sistemas Operativos***
+Repositorio que contiene todo lo que corresponde (trabajos de entrega, notas) de la materia ***Sistemas Operativos***
 
 ## Notas
 
