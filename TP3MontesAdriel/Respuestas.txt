@@ -78,3 +78,15 @@ el código sin necesidad de estar utilizando la misma maquina.
 
 9.¿Qué se entiende por módulo en Linux?¿En qué consiste?¿Cómo se carga y descarga un
 módulo por consola? Brinde ejemplos de ello.
+
+Existe una gran cantidad de componentes de hardware para PCs. Para utilizar este hardware correctamente, se 
+necesita un controlador que haga de intermediario entre el sistema operativo (en Linux es el kernel) y el hardware.
+Esta forma integrar controladores en el kernel es que los controladores sea cargados cuando se necesitan, lo que se 
+denomina como kernel modularizado. La ventaja es que sólo se cargan los controladores que se necesitan realmente, 
+por lo tanto el kernel no contiene ninguna carga innecesaria.
+En la configuración del kernel se define qué controladores se unirán al módulo y cuáles se añadirán como módulos. 
+Todos los componentes del kernel que no sean necesarios durante el proceso de arranque deberán añadirse como módulos. 
+De esta forma nos aseguramos de que el kernel no aumente excesivamente de tamaño.
+
+El comando insmod carga el módulo indicado => $ sudo insmod modulo.ko
+El comando rmmod descarga el módulo indicado => $ sudo rmmod modulo.ko
