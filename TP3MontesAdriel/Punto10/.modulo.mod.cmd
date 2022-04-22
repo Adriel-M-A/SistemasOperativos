@@ -1,1 +1,0 @@
-cmd_/home/adriel/sistemas-operativos/TP3MontesAdriel/Punto10/modulo.mod := { echo  /home/adriel/sistemas-operativos/TP3MontesAdriel/Punto10/modulo.o;  echo; } > /home/adriel/sistemas-operativos/TP3MontesAdriel/Punto10/modulo.mod

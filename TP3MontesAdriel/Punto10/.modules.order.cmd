@@ -1,1 +1,0 @@
-cmd_/home/adriel/sistemas-operativos/TP3MontesAdriel/Punto10/modules.order := {   echo /home/adriel/sistemas-operativos/TP3MontesAdriel/Punto10/modulo.ko; :; } | awk '!x[$$0]++' - > /home/adriel/sistemas-operativos/TP3MontesAdriel/Punto10/modules.order

@@ -1,1 +1,0 @@
-cmd_/home/adriel/sistemas-operativos/TP3MontesAdriel/Punto10/modulo.ko := ld -r  -m elf_x86_64  --build-id=sha1  -T scripts/module.lds -o /home/adriel/sistemas-operativos/TP3MontesAdriel/Punto10/modulo.ko /home/adriel/sistemas-operativos/TP3MontesAdriel/Punto10/modulo.o /home/adriel/sistemas-operativos/TP3MontesAdriel/Punto10/modulo.mod.o;  true

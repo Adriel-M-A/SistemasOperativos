@@ -1,1 +1,0 @@
-cmd_/home/adriel/sistemas-operativos/TP3MontesAdriel/Punto10/Module.symvers := sed 's/\.ko$$/\.o/' /home/adriel/sistemas-operativos/TP3MontesAdriel/Punto10/modules.order | scripts/mod/modpost -m -a  -o /home/adriel/sistemas-operativos/TP3MontesAdriel/Punto10/Module.symvers -e -i Module.symvers   -T -
