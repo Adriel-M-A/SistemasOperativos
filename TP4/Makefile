@@ -1,13 +1,10 @@
-
-OBJ = servidor.o comunicaciones.o hardware.o
-
 all: servidor cliente
 
 cliente: cliente.o comunicaciones.o hardware.o
-	gcc -o cliente $(OBJ)
+	gcc -o cliente servidor.o comunicaciones.o hardware.o
 
-servidor: $(OBJ)
-	gcc -o servidor $(OBJ)
+servidor: servidor.o comunicaciones.o hardware.o
+	gcc -o servidor servidor.o comunicaciones.o hardware.o
 
 servidor.o: servidor.c servidor.h interfaz.h comunicaciones.h
 	gcc -c servidor.c 
