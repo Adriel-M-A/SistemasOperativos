@@ -19,4 +19,4 @@ hardware.o: hardware.c hardware.h
 	gcc -c hardware.c
 
 clean:
-	rm $(OBJ)
+	rm cliente.o servidor.o comunicaciones.o hardware.o

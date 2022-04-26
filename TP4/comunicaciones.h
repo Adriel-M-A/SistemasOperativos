@@ -1,6 +1,6 @@
-#include <stdio.h>
-#include "comunicaciones.h"
+#ifndef COMUNICACIONES
+#define COMUNICACIONES
 
-void Comunicaciones(){
-    printf("Hola soy las Comunicaciones");
-}
+void Comunicaciones();
+
+#endif
