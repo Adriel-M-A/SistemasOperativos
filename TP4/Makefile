@@ -14,6 +14,3 @@ comunicaciones.o: comunicaciones.c comunicaciones.h hardware.h
 
 hardware.o: hardware.c hardware.h
 	gcc -c hardware.c
-
-clean:
-	rm cliente.o servidor.o comunicaciones.o hardware.o
