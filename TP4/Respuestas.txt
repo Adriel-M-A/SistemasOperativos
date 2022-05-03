@@ -1,0 +1,15 @@
+1) 
+
+sem_open: crea un nuevo semáforo o abre uno ya existente, identificado por nombre
+sem_post: desbloquea un semáforo
+sem_wait: bloquea un semáforo
+sem_close: cierra un semáforo
+sem_unlink: borra un semáforo
+shm_open: crea/abre objetos POSIX de memoria compartida
+ftruncate: trunca un fichero a una longitud especificada
+mmap: ubica ficheros o dispositivos de memoria
+mq_open: crea o abre una cola de mensajes
+mq_send: envia un mensaje a una cola de mensajes
+mq_receive: recibe un mensaje de la cola de mensajes
+mq_close: cierra una cola de mensajes
+mq_unlink: borra una cola de mensajes
