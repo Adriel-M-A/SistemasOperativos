@@ -9,6 +9,9 @@ servidor: servidor.o comunicaciones.o hardware.o
 servidor.o: servidor.c servidor.h interfaz.h comunicaciones.h
 	gcc -c servidor.c 
 
+cliente.o: cliente.c cliente.h interfaz.h comunicaciones.h
+	gcc -c cliente.c
+
 comunicaciones.o: comunicaciones.c comunicaciones.h hardware.h
 	gcc -c comunicaciones.c 
 
