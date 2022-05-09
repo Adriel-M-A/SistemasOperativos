@@ -3,6 +3,11 @@
 #include "comunicaciones.h"
 #include "stdio.h"
 
-void Servidor(){
+
+void Cliente(){
     printf("Hola soy el cliente\n");
+}
+
+int main(){
+    Cliente();
 }
