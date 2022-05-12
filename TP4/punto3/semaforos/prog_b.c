@@ -8,7 +8,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <semaphore.h>
-#define MAX 4096
+#define MAX 4096 //4MB
 
 int main(void){
 
