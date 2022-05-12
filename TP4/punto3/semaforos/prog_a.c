@@ -11,7 +11,7 @@
 
 #define MAX 4096
 
-int main(void) {
+int main(void){
 
 	char c;
 	const char *nombre = "/ObjCompartido";
@@ -20,7 +20,7 @@ int main(void) {
 
 	sem_t *semaforo;
    
-	if ((semaforo = sem_open("/semaforo", O_CREAT, 0700, 0)) == SEM_FAILED){
+	if((semaforo = sem_open("/semaforo", O_CREAT, 0700, 0)) == SEM_FAILED){
 		perror("Error al crear semaforo");
 		return -1;
 	}
@@ -29,17 +29,17 @@ int main(void) {
 	ftruncate(shm_fd, MAX);
 	puntero = mmap(0, MAX, PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
    
-	if (puntero == MAP_FAILED){
-		perror("Error al mapear objeto compartido");
+	if(puntero == MAP_FAILED){
+		perror("Error de mapeo");
 		return -1;
 	}
 
-	while (1) {
+	while(1){
    		c = getchar();
 		sprintf(puntero++, "%c", c);
 		sem_post(semaforo);
 
-		if (c == EOF){
+		if(c == EOF){
 			break;
 		}
 	}
