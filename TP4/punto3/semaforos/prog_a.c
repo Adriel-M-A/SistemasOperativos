@@ -36,7 +36,8 @@ int main(void){
 
 	while(1){
    		c = getchar();
-		sprintf(puntero++, "%c", c);
+		//sprintf(puntero++, "%c", c);
+		printf("%c", c);
 		sem_post(semaforo);
 
 		if(c == EOF){
