@@ -11,9 +11,9 @@
 #define MAX 4096
 
 int main(void){
-	
+
 	char c;
-	const char *nombre = "/ObjCompartido";
+	const char *nombre = "/compartido";
 	int shm_fd;
 	void *puntero;
 
