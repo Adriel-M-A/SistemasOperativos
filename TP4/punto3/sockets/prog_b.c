@@ -48,6 +48,7 @@ int main(void) {
 		perror("Error al intentar escuchar:");
 		return 1;
 	}
+	
 	if((connection_fd = accept(socket_fd, (struct sockaddr *) &address, &address_length)) > -1) {
 		connection_handler(connection_fd);
 		close(connection_fd);
