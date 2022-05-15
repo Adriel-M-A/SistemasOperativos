@@ -27,8 +27,8 @@ int main(void) {
 	struct sockaddr_un address;
 	int socket_fd, connection_fd;
 	socklen_t address_length;
-
 	socket_fd = socket(PF_UNIX, SOCK_STREAM, 0);
+	
 	if(socket_fd < 0) {
 		printf("Falla en socket\n");
 		return 1;
@@ -48,7 +48,7 @@ int main(void) {
 		perror("Error al intentar escuchar:");
 		return 1;
 	}
-	
+
 	if((connection_fd = accept(socket_fd, (struct sockaddr *) &address, &address_length)) > -1) {
 		connection_handler(connection_fd);
 		close(connection_fd);
