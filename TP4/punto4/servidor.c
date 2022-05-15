@@ -37,14 +37,15 @@ int main(int argc , char *argv[])
         socket_cliente[i] = 0;
     }
      
-    //COMPLETAR CON COMENTARIO
+    //Llama a un socket y devuelve el FD en socket_master. Si la operacion falla muestra el error
     if( (socket_master = socket(AF_INET , SOCK_STREAM , 0)) == 0) 
     {
         perror("Llamada socket falló");
         exit(EXIT_FAILURE);
     }
  
-    //COMPLETAR CON COMENTARIO
+    /*La funcion controla el comportamiento del socket. Permite asignar espacio al bufer, controlar tiempos
+    de espera o permitir transmision de datos. */
     if( setsockopt(socket_master, SOL_SOCKET, SO_REUSEADDR, (char *)&opt, sizeof(opt)) < 0 )
     {
         perror("Llamada setsockopt falló");
@@ -56,7 +57,7 @@ int main(int argc , char *argv[])
     direccion.sin_addr.s_addr = INADDR_ANY;
     direccion.sin_port = htons(PORT);
      
-    //COMPLETAR CON COMENTARIO
+    //Una vez creado y configurado el socket se le asigna una direccion especificada.
     if (bind(socket_master, (struct sockaddr *)&direccion, sizeof(direccion))<0) 
     {
         perror("Llamada bind falló");
@@ -64,27 +65,27 @@ int main(int argc , char *argv[])
     }
 	printf("Escuchando en puerto %d \n", PORT);
 	
-    //COMPLETAR CON COMENTARIO
+    //Le indica al socket que se usará para aceptar solicitudes de conexiones
 	if (listen(socket_master, 3) < 0)
     {
         perror("Llamada listen falló");
         exit(EXIT_FAILURE);
     }
      
-    //COMPLETAR CON COMENTARIO
+    //Se le "asigna un nombre" al socket. 
     addrlen = sizeof(direccion);
     puts("Esperando conexiones entrantes ...");
     
 	while(TRUE) 
     {
-        //COMPLETAR CON COMENTARIO
+        //Macro para borrar todos los FD (para evitar basura) 
         FD_ZERO(&fds_lectura);
  
-	    //COMPLETAR CON COMENTARIO
+	    //Macro para agregar un FD a la lista de lectura.
         FD_SET(socket_master, &fds_lectura);
         max_sd = socket_master;
 		
-		//COMPLETAR CON COMENTARIO
+		//Itera segun la cantidad maxima de clientes y realiza los siguientes pasos.
         for (i = 0 ; i < max_clientes ; i++) 
         {
         	//descriptor de socket
@@ -99,7 +100,7 @@ int main(int argc , char *argv[])
 				max_sd = sd;
         }
  
-        //COMPLETAR CON COMENTARIO
+        //Select selecciona el cliente y lo llama para ser atendido
         actividad = select( max_sd + 1 , &fds_lectura , NULL , NULL , NULL);
    
         if ((actividad < 0) && (errno!=EINTR)) 
@@ -107,7 +108,7 @@ int main(int argc , char *argv[])
             printf("Llamada a select falló");
         }
          
-        //COMPLETAR CON COMENTARIO
+        //Primero verifica si el FD sigue estando presente en la lista. Luego acepta la conexion con el cliente y si falla termina.
         if (FD_ISSET(socket_master, &fds_lectura)) 
         {
             if ((nuevo_socket = accept(socket_master, (struct sockaddr *)&direccion, (socklen_t*)&addrlen))<0)
@@ -118,17 +119,17 @@ int main(int argc , char *argv[])
 
             printf("Nueva conexion , file descriptor de socket es %d , ip es : %s , puerto : %d \n" , nuevo_socket , inet_ntoa(direccion.sin_addr) , ntohs(direccion.sin_port));
        
-            //COMPLETAR CON COMENTARIO
+            //Envia un mensaje al cliente
             if( send(nuevo_socket, mensaje, strlen(mensaje), 0) != strlen(mensaje) ) 
                 perror("Llamada send falló");
              
             puts("Mensaje enviado exitosamente");
              
-            //COMPLETAR CON COMENTARIO
+            //Itera segun la cantidad maxima de clientes
             for (i = 0; i < max_clientes; i++) 
             {
                 
-				if( socket_cliente[i] == 0 )
+				if( socket_cliente[i] == 0 ) //Si no esta el socket lo añade a la lista
                 {
                	    socket_cliente[i] = nuevo_socket;
                     printf("Añadiendo a lista de sockets como %d\n" , i);
