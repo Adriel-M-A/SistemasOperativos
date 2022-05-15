@@ -38,8 +38,7 @@ int main(void) {
 
         buffer[nbytes] = 0;
 
-		if(strncmp(buffer, "quit", 4) == 0)
-			break;
+		if(strncmp(buffer, "quit", 4) == 0) break;
 		write(socket_fd, buffer, nbytes);
 	}
 
