@@ -13,16 +13,7 @@ int main (){
 	
 	struct mq_attr atributos;
 	
-//definimos los atributos de la cola de mensajes
-/*
-	atributos.mq_flags = 0;
-	atributos.mq_maxmsg = 15;
-	atributos.mq_msgsize = MAX;
-	atributos.mq_curmsgs = 0;
-
-*/
-	
-	if((cola_mensajes = mq_open("/mq_so", O_CREAT | O_RDWR, 0660, NULL)) == -1){
+	if((cola_mensajes = mq_open("/mq_so", O_CREAT | O_RDWR, 0777, NULL)) == -1){
 		perror("No se pudo crear cola de mensajes");
 		return 1;
 	}
