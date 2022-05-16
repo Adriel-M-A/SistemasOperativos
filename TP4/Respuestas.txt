@@ -16,5 +16,7 @@ mq_unlink: borra una cola de mensajes
 
 4)
 
-permite que un programa monitoree múltiples descriptores de archivos,
+a- Permite que un programa monitoree múltiples descriptores de archivos,
 esperando hasta que uno o más de los descriptores de archivo estén "listos"
+
+c- 
