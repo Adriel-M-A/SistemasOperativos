@@ -6,7 +6,6 @@
 #include <string.h>
 #define MAX 5
 
-
 int main (){
 
 	mqd_t cola_mensajes;
@@ -20,7 +19,6 @@ int main (){
 
 	char c;
 	char c_buffer[MAX];
-
 
 	while(1){
 		c = getchar();
