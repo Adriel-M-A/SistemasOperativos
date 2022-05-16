@@ -4,7 +4,7 @@
 #include <mqueue.h>
 #include <errno.h>
 #include <string.h>
-#define MAX 5
+#define MAX 100
 
 int main (){
 
