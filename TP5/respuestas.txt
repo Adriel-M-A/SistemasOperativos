@@ -10,6 +10,8 @@ Cambiar puerto:
     2) Descomentar opcion de puerto
     3) Cambiar 22 por puerto a eleccion
 
-Comprobar puerto: 
-    ssh -p puerto_nuevo usuario@ip_usuario
+Guardar cambios:
+    service ssh restart
 
+Comprobar puerto: 
+    ssh -p puerto_nuevo usuario@Dirección_IP_del_Servidor
