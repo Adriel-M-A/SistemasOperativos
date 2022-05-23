@@ -1,0 +1,15 @@
+1. Explicar brevemente qué es y para qué sirve SSH. ¿Qué es OpenSSH?
+
+SSH (o Secure SHell) es un protocolo que facilita las comunicaciones seguras entre dos sistemas usando una arquitectura cliente/servidor y que permite a los usuarios conectarse a un host remotamente, encripta la sesión de conexión, haciendo imposible que alguien pueda obtener contraseñas no encriptadas. OpenSSH es un conjunto de aplicaciones que permiten realizar comunicaciones cifradas a través de una red, usando el protocolo SSH.
+
+Instalacion: 
+    sudo apt-get install openssh-server openssh-client
+
+Cambiar puerto:
+    1) editor_de_codigo /etc/ssh/sshd_config
+    2) Descomentar opcion de puerto
+    3) Cambiar 22 por puerto a eleccion
+
+Comprobar puerto: 
+    ssh -p puerto_nuevo usuario@ip_usuario
+
