@@ -2,21 +2,35 @@
 
 SSH (o Secure SHell) es un protocolo que facilita las comunicaciones seguras entre dos sistemas usando una arquitectura cliente/servidor y que permite a los usuarios conectarse a un host remotamente, encripta la sesión de conexión, haciendo imposible que alguien pueda obtener contraseñas no encriptadas. OpenSSH es un conjunto de aplicaciones que permiten realizar comunicaciones cifradas a través de una red, usando el protocolo SSH.
 
-2) Instalacion: sudo apt-get install openssh-server openssh-client
+
+2. Instalacion: sudo apt-get install openssh-server openssh-client
+
 
 4. Configurar el servicio SSH para que no admita conexiones con el usuario root.  
 
 Para modificar la configuración del servidor SSH, es necesario abrir el archivo sshd_config, dentro de la carpeta de ssh en nuestra maquina. Dentro del mismo, hay una linea llamada “PermitRootLogin”, solo hace falta escribir “no” al lado, para deshabilitar el loggeo como usuario Root. De esta manera las conexiones Root quedarán bloqueadas evitando que usuarios no autorizados puedan realizar ataques de fuerza bruta contra nuestro servidor SSH para adivinar los credenciales del usuario Root.
 
-5) Dentro del mismo archivo sshd_config en la carpeta ssh para crear una lista de usuarios permitidos para conectarse remotamente se utiliza AllowUsers, esto bloqueará todas las conexiones de los usuarios que no estén en el listado.
 
-6) Dentro del mismo archivo sshd_config en la carpeta ssh para cambiar el puerto de escucha por defecto se cambia la linea que dice “Port” y en vez del 22 que está, ponemos el número que querramos (en este caso 10022)
+5. Configurar el servicio para que solo permita conexiones remotas a ciertos usuarios.
+
+Dentro del mismo archivo sshd_config en la carpeta ssh para crear una lista de usuarios permitidos para conectarse remotamente se utiliza AllowUsers, esto bloqueará todas las conexiones de los usuarios que no estén en el listado.
+
+
+6. El servicio SSH por defecto escucha en el puerto 22. Modificarlo para que atienda en el puerto 10022 (u otro) y averiguar cuál es el comando utilizado para poder acceder al servidor en el nuevo puerto. ​(consultar man ssh).
+
+Dentro del mismo archivo sshd_config en la carpeta ssh para cambiar el puerto de escucha por defecto se cambia la linea que dice “Port” y en vez del 22 que está, ponemos el número que querramos (en este caso 10022)
 
 Cambiar puerto:
     1) editor_de_codigo /etc/ssh/sshd_config
     2) Descomentar opcion de puerto
     3) Cambiar 22 por puerto a eleccion
 
-7) Para modificar el mensaje de bienvenida, hay que modificar el archivo etc/motd/.
 
-8) Para ejecutar aplicaciones graficas de forma remota, en el servidor, editar el archivo /etc/ssh/ssh_config y modificar la opción X11Forwarding para que quede así: X11Forwarding yes
+7. Por defecto, al autenticarnos correctamente en el servidor SSH, éste nos muestra la fecha y hora de la última vez que nos conectamos. Buscar la forma de modificar este aspecto.
+
+Para modificar el mensaje de bienvenida, hay que modificar el archivo etc/motd/.
+
+
+8. Configurar el servidor SSH de forma adecuada para que acepte la redirección X11, de tal forma que se puedan ejecutar aplicaciones gráficas de forma remota. Comprobar su funcionamiento.
+
+Para ejecutar aplicaciones graficas de forma remota, en el servidor, editar el archivo /etc/ssh/ssh_config y modificar la opción X11Forwarding para que quede así: X11Forwarding yes
